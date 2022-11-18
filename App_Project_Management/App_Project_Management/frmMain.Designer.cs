@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.pnlWindowTools = new System.Windows.Forms.Panel();
             this.btnHide = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnMax = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -42,6 +42,7 @@
             this.roundedFormMain = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lbAcc = new System.Windows.Forms.Label();
             this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMembers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnProjects = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -57,8 +58,7 @@
             this.memberTab = new System.Windows.Forms.TabPage();
             this.memberPage = new App_Project_Management.Views.MemberPage();
             this.taskPage = new System.Windows.Forms.TabPage();
-            this.taskPage2 = new App_Project_Management.Views.TaskPage();
-            this.taskPage1 = new App_Project_Management.Views.TaskPage();
+            this.taskTabPage = new App_Project_Management.Views.TaskPage();
             this.dragFormMain = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlWindowTools.SuspendLayout();
             this.pnlLeft.SuspendLayout();
@@ -217,6 +217,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
+            this.pnlMenu.Controls.Add(this.lbAcc);
             this.pnlMenu.Controls.Add(this.btnLogout);
             this.pnlMenu.Controls.Add(this.btnMembers);
             this.pnlMenu.Controls.Add(this.btnProjects);
@@ -228,6 +229,17 @@
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(20);
             this.pnlMenu.Size = new System.Drawing.Size(300, 668);
             this.pnlMenu.TabIndex = 2;
+            // 
+            // lbAcc
+            // 
+            this.lbAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbAcc.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcc.Location = new System.Drawing.Point(20, 534);
+            this.lbAcc.Name = "lbAcc";
+            this.lbAcc.Size = new System.Drawing.Size(260, 50);
+            this.lbAcc.TabIndex = 5;
+            this.lbAcc.Text = "label1";
+            this.lbAcc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout
             // 
@@ -248,11 +260,11 @@
             this.btnLogout.ColorContrastOnClick = 45;
             this.btnLogout.ColorContrastOnHover = 45;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnLogout.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnLogout.CustomizableEdges = borderEdges5;
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLogout.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -340,11 +352,11 @@
             this.btnMembers.ColorContrastOnClick = 45;
             this.btnMembers.ColorContrastOnHover = 45;
             this.btnMembers.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnMembers.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnMembers.CustomizableEdges = borderEdges6;
             this.btnMembers.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMembers.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMembers.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -431,11 +443,11 @@
             this.btnProjects.ColorContrastOnClick = 45;
             this.btnProjects.ColorContrastOnHover = 45;
             this.btnProjects.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnProjects.CustomizableEdges = borderEdges3;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnProjects.CustomizableEdges = borderEdges7;
             this.btnProjects.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnProjects.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProjects.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -523,11 +535,11 @@
             this.btnCompanies.ColorContrastOnClick = 45;
             this.btnCompanies.ColorContrastOnHover = 45;
             this.btnCompanies.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnCompanies.CustomizableEdges = borderEdges4;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btnCompanies.CustomizableEdges = borderEdges8;
             this.btnCompanies.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCompanies.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCompanies.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -640,29 +652,29 @@
             this.main.Location = new System.Drawing.Point(300, 30);
             this.main.Multiline = true;
             this.main.Name = "main";
-            this.main.Page = this.memberTab;
-            this.main.PageIndex = 2;
-            this.main.PageName = "memberTab";
-            this.main.PageTitle = "Members";
+            this.main.Page = this.companyTab;
+            this.main.PageIndex = 0;
+            this.main.PageName = "companyTab";
+            this.main.PageTitle = "Companies";
             this.main.SelectedIndex = 0;
             this.main.Size = new System.Drawing.Size(1066, 738);
             this.main.TabIndex = 2;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 0.6F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 10;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.main.Transition = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 0.6F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 10;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.main.Transition = animation2;
             this.main.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // companyTab
@@ -716,7 +728,7 @@
             this.memberTab.Controls.Add(this.memberPage);
             this.memberTab.Location = new System.Drawing.Point(4, 4);
             this.memberTab.Name = "memberTab";
-            this.memberTab.Size = new System.Drawing.Size(1058, 710);
+            this.memberTab.Size = new System.Drawing.Size(192, 74);
             this.memberTab.TabIndex = 2;
             this.memberTab.Text = "Members";
             // 
@@ -728,13 +740,12 @@
             this.memberPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.memberPage.Location = new System.Drawing.Point(0, 0);
             this.memberPage.Name = "memberPage";
-            this.memberPage.Size = new System.Drawing.Size(1058, 710);
+            this.memberPage.Size = new System.Drawing.Size(192, 74);
             this.memberPage.TabIndex = 0;
             // 
             // taskPage
             // 
-            this.taskPage.Controls.Add(this.taskPage2);
-            this.taskPage.Controls.Add(this.taskPage1);
+            this.taskPage.Controls.Add(this.taskTabPage);
             this.taskPage.Location = new System.Drawing.Point(4, 4);
             this.taskPage.Name = "taskPage";
             this.taskPage.Padding = new System.Windows.Forms.Padding(3);
@@ -743,26 +754,16 @@
             this.taskPage.Text = "Tasks";
             this.taskPage.UseVisualStyleBackColor = true;
             // 
-            // taskPage2
+            // taskTabPage
             // 
-            this.taskPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.taskPage2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
-            this.taskPage2.Location = new System.Drawing.Point(0, 0);
-            this.taskPage2.Name = "taskPage2";
-            this.taskPage2.Size = new System.Drawing.Size(1058, 710);
-            this.taskPage2.TabIndex = 1;
-            // 
-            // taskPage1
-            // 
-            this.taskPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.taskPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.taskPage1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
-            this.taskPage1.Location = new System.Drawing.Point(3, 3);
-            this.taskPage1.Name = "taskPage1";
-            this.taskPage1.Size = new System.Drawing.Size(186, 50);
-            this.taskPage1.TabIndex = 0;
+            this.taskTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.taskTabPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taskTabPage.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
+            this.taskTabPage.Location = new System.Drawing.Point(3, 3);
+            this.taskTabPage.Name = "taskTabPage";
+            this.taskTabPage.Size = new System.Drawing.Size(186, 50);
+            this.taskTabPage.TabIndex = 0;
             // 
             // dragFormMain
             // 
@@ -826,8 +827,8 @@
         private Views.MemberPage memberPage;
         private System.Windows.Forms.TabPage taskPage;
         public Bunifu.UI.WinForms.BunifuPages main;
-        private Views.TaskPage taskPage1;
-        private Views.TaskPage taskPage2;
+        private Views.TaskPage taskTabPage;
+        private System.Windows.Forms.Label lbAcc;
     }
 }
 

@@ -307,7 +307,7 @@
             this.txbseach.SelectionLength = 0;
             this.txbseach.SelectionStart = 0;
             this.txbseach.ShortcutsEnabled = true;
-            this.txbseach.Size = new System.Drawing.Size(244, 43);
+            this.txbseach.Size = new System.Drawing.Size(244, 39);
             this.txbseach.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbseach.TabIndex = 3;
             this.txbseach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

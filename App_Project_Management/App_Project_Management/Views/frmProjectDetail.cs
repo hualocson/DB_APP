@@ -39,6 +39,7 @@ namespace App_Project_Management.Views
         private void btnViewTask_Click(object sender, EventArgs e)
         {
             frmMain.activePage = 3;
+            frmMain.currentProjectID = projectDetailsModel.ProjectId;
             Close();
         }
 

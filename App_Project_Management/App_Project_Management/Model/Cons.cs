@@ -15,5 +15,13 @@ namespace App_Project_Management.Model
             TL = 2,
             TM = 1,
         }
+        public enum TASK_STATUS
+        {
+            PENDING = 4,
+            TODO = 3,
+            DONE = 2,
+            INPROGRESS = 1,
+            UNDEFINE = 0,
+        }
     }
 }
