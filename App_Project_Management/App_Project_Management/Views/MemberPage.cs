@@ -85,6 +85,23 @@ namespace App_Project_Management.Views
             }
         }
 
+        public void LoadMemberWithWord()
+        {
+            try
+            {
+                dtgvMember.DataSource = dbMem.searchMemberByName(this.txbsearch.Text);
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+            }
+        }
+
+        private void MemberPage_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
         private void dtgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = dtgvMember.CurrentCell.RowIndex;
@@ -96,6 +113,11 @@ namespace App_Project_Management.Views
             frmMemberDetail member_details = new frmMemberDetail(name, username, password, gender, id);
             member_details.isMale = gender;
             member_details.ShowDialog();
+        }
+
+        private void txbsearch_TextChange(object sender, EventArgs e)
+        {
+            LoadMemberWithWord();
         }
     }
 }

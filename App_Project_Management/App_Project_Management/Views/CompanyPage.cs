@@ -64,6 +64,21 @@ namespace App_Project_Management.Views
                 }
             }
         }
+        private void LoadDataWithWord()
+        {
+            try
+            {
+                dtgvCompany.DataSource = dbCom.searchCompanyByName(this.txbseach.Text);
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+            }
+        }
+        private void CompanyPage_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
 
         private void dtgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -75,6 +90,15 @@ namespace App_Project_Management.Views
             int id = Int32.Parse( dtgvCompany.Rows[r].Cells[0].Value.ToString());
             Form company_details = new frmCompanyDetail(name,abbreviation, address, phone, id) ;
             company_details.ShowDialog();
+        }
+
+        private void txbseach_TextChange(object sender, EventArgs e)
+        {
+            LoadDataWithWord();
+        }
+
+        private void txbseach_KeyUp(object sender, KeyEventArgs e)
+        {
         }
     }
 }
