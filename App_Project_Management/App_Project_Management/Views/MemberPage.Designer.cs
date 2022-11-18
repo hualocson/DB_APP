@@ -106,6 +106,8 @@
             // dtgvMember
             // 
             this.dtgvMember.AllowCustomTheming = false;
+            this.dtgvMember.AllowUserToAddRows = false;
+            this.dtgvMember.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dtgvMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -169,6 +171,7 @@
             this.dtgvMember.HeaderForeColor = System.Drawing.Color.White;
             this.dtgvMember.Location = new System.Drawing.Point(10, 70);
             this.dtgvMember.Name = "dtgvMember";
+            this.dtgvMember.ReadOnly = true;
             this.dtgvMember.RowHeadersVisible = false;
             this.dtgvMember.RowHeadersWidth = 51;
             this.dtgvMember.RowTemplate.Height = 40;
@@ -184,6 +187,7 @@
             this.id.HeaderText = "id";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
             // member_name
@@ -192,6 +196,7 @@
             this.member_name.HeaderText = "Name";
             this.member_name.MinimumWidth = 6;
             this.member_name.Name = "member_name";
+            this.member_name.ReadOnly = true;
             // 
             // gender
             // 
@@ -199,6 +204,7 @@
             this.gender.HeaderText = "gender";
             this.gender.MinimumWidth = 6;
             this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
             this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gender.Visible = false;
             // 
@@ -208,6 +214,7 @@
             this.role_id.HeaderText = "role_id";
             this.role_id.MinimumWidth = 6;
             this.role_id.Name = "role_id";
+            this.role_id.ReadOnly = true;
             this.role_id.Visible = false;
             // 
             // team_id
@@ -216,6 +223,7 @@
             this.team_id.HeaderText = "team_id";
             this.team_id.MinimumWidth = 6;
             this.team_id.Name = "team_id";
+            this.team_id.ReadOnly = true;
             this.team_id.Visible = false;
             // 
             // team_name
@@ -224,6 +232,7 @@
             this.team_name.HeaderText = "Team";
             this.team_name.MinimumWidth = 6;
             this.team_name.Name = "team_name";
+            this.team_name.ReadOnly = true;
             // 
             // member_email
             // 
@@ -231,6 +240,7 @@
             this.member_email.HeaderText = "Email";
             this.member_email.MinimumWidth = 6;
             this.member_email.Name = "member_email";
+            this.member_email.ReadOnly = true;
             // 
             // password
             // 
@@ -238,6 +248,7 @@
             this.password.HeaderText = "password";
             this.password.MinimumWidth = 6;
             this.password.Name = "password";
+            this.password.ReadOnly = true;
             this.password.Visible = false;
             // 
             // company_id
@@ -246,6 +257,7 @@
             this.company_id.HeaderText = "company_id";
             this.company_id.MinimumWidth = 6;
             this.company_id.Name = "company_id";
+            this.company_id.ReadOnly = true;
             this.company_id.Visible = false;
             // 
             // member_role
@@ -254,6 +266,7 @@
             this.member_role.HeaderText = "Role";
             this.member_role.MinimumWidth = 6;
             this.member_role.Name = "member_role";
+            this.member_role.ReadOnly = true;
             // 
             // company_name
             // 
@@ -261,6 +274,7 @@
             this.company_name.HeaderText = "Company";
             this.company_name.MinimumWidth = 6;
             this.company_name.Name = "company_name";
+            this.company_name.ReadOnly = true;
             // 
             // abbreviation
             // 
@@ -268,6 +282,7 @@
             this.abbreviation.HeaderText = "Abbreviation";
             this.abbreviation.MinimumWidth = 6;
             this.abbreviation.Name = "abbreviation";
+            this.abbreviation.ReadOnly = true;
             this.abbreviation.Visible = false;
             // 
             // pnlTable
@@ -630,7 +645,6 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.Name = "MemberPage";
             this.Size = new System.Drawing.Size(1058, 710);
-            this.Load += new System.EventHandler(this.MemberPage_Load);
             this.pnlMemberTabHeader.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMember)).EndInit();

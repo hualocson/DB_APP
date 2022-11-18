@@ -475,7 +475,6 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.Name = "CompanyPage";
             this.Size = new System.Drawing.Size(1058, 710);
-            this.Load += new System.EventHandler(this.CompanyPage_Load);
             this.pnlCompanyTabHeader.ResumeLayout(false);
             this.pnlCompanyTabBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCompany)).EndInit();

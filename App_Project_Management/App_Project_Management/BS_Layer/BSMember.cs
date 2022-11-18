@@ -43,6 +43,17 @@ namespace App_Project_Management.BS_Layer
             string sqlString = $"SELECT * FROM dbo.searchMemberByName('{name}')";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+        public DataTable getAllMemberByCompanyId(int company_id)
+        {
+            string sqlString = $"EXEC getAllMemberByCompanyId {company_id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
+        public DataTable getAllMemberByTeamId(int team_id)
+        {
+            string sqlString = $"EXEC getAllMemberByTeamId {team_id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
+
         public bool addMember(string name, bool gender, int role, int team_id, string username, string password, int company_id, ref string err)
         {
             return db.MyExecuteNonQuery($"EXEC addMember '{name}',{gender},{role},{team_id},'{username}','{password}',{company_id}", CommandType.Text, ref err);

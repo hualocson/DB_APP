@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using App_Project_Management.Views;
 using Bunifu.UI.WinForms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Runtime.CompilerServices;
 using App_Project_Management.Model;
 
 namespace App_Project_Management
@@ -76,23 +74,26 @@ namespace App_Project_Management
             switch (frmLogin.account.Role)
             {
                 case Cons.ROLE.SA:
-                    companyTabPage.LoadData();
-                    memberPage.LoadData();
-                    projectPage.LoadUpdateData();
-                    break;
-                case Cons.ROLE.TL:
-                case Cons.ROLE.TM:
-                    btnCompanies.Enabled = false;
-                    activePage = 1;
-                    memberPage.LoadData();
+                    btnCompanies.Enabled = true;
+                    btnMembers.Enabled = true;
                     projectPage.LoadUpdateData();
                     break;
                 case Cons.ROLE.PM:
-                    companyTabPage.LoadData();
-                    memberPage.LoadData();
+                    btnCompanies.Enabled = true;
+                    btnMembers.Enabled = true;
                     projectPage.LoadUpdateData();
                     break;
-                default:
+                case Cons.ROLE.TL:
+                    btnCompanies.Enabled = false;
+                    btnMembers.Enabled = true;
+                    activePage = 1;
+                    projectPage.LoadUpdateData();
+                    break;
+                case Cons.ROLE.TM:
+                    btnCompanies.Enabled = false;
+                    btnMembers.Enabled = false;
+                    activePage = 1;
+                    projectPage.LoadUpdateData();
                     break;
             }
         }

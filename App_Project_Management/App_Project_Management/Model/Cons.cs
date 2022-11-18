@@ -11,9 +11,9 @@ namespace App_Project_Management.Model
         public enum ROLE
         {
             SA = 4,
-            PM = 1,
+            PM = 3,
             TL = 2,
-            TM = 3,
+            TM = 1,
         }
     }
 }
