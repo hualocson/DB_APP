@@ -43,6 +43,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
       <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
@@ -118,6 +121,7 @@
     <Compile Include="BS_Layer\BSMember.cs" />
     <Compile Include="BS_Layer\BSProject.cs" />
     <Compile Include="BS_Layer\BSRole.cs" />
+    <Compile Include="BS_Layer\BSTask.cs" />
     <Compile Include="BS_Layer\BSTeam.cs" />
     <Compile Include="DB_Layer\DBMain.cs" />
     <Compile Include="frmMain.cs">
@@ -131,6 +135,7 @@
     <Compile Include="Model\Cons.cs" />
     <Compile Include="Model\MemberDetailsModel.cs" />
     <Compile Include="Model\ProjectDetailsModel.cs" />
+    <Compile Include="Model\TaskModel.cs" />
     <Compile Include="Model\TeamDetailsModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +187,12 @@
     <Compile Include="Views\frmProjectDetail.Designer.cs">
       <DependentUpon>frmProjectDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmTaskDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmTaskDetails.Designer.cs">
+      <DependentUpon>frmTaskDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MemberPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -199,12 +210,6 @@
     </Compile>
     <Compile Include="Views\ProjectPage.Designer.cs">
       <DependentUpon>ProjectPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TaskCard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\TaskCard.Designer.cs">
-      <DependentUpon>TaskCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TaskPage.cs">
       <SubType>UserControl</SubType>
@@ -250,6 +255,9 @@
     <EmbeddedResource Include="Views\frmProjectDetail.resx">
       <DependentUpon>frmProjectDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmTaskDetails.resx">
+      <DependentUpon>frmTaskDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MemberPage.resx">
       <DependentUpon>MemberPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,9 +266,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ProjectPage.resx">
       <DependentUpon>ProjectPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TaskCard.resx">
-      <DependentUpon>TaskCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TaskPage.resx">
       <DependentUpon>TaskPage.cs</DependentUpon>
