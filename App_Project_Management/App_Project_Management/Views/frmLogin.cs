@@ -16,7 +16,7 @@ namespace App_Project_Management.Views
     {
         string err = "";
         public static AccountModel account = null;
-        public bool isLoginSuccess = false;
+        public static bool isLoginSuccess = false;
 
         public frmLogin()
         {

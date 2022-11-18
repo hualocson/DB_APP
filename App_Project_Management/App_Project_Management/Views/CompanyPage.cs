@@ -31,7 +31,7 @@ namespace App_Project_Management.Views
         }
         public void LoadData()
         {
-            if(frmLogin.account.Role.Equals(Cons.ROLE.SA))
+            if (frmLogin.account.Role.Equals(Cons.ROLE.SA))
             {
                 try
                 {
@@ -77,7 +77,8 @@ namespace App_Project_Management.Views
         }
         private void CompanyPage_Load(object sender, EventArgs e)
         {
-            //LoadData();
+            if (frmLogin.isLoginSuccess)
+                LoadData();
         }
 
         private void dtgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -87,8 +88,8 @@ namespace App_Project_Management.Views
             string abbreviation = dtgvCompany.Rows[r].Cells[2].Value.ToString();
             string address = dtgvCompany.Rows[r].Cells[3].Value.ToString();
             string phone = dtgvCompany.Rows[r].Cells[4].Value.ToString();
-            int id = Int32.Parse( dtgvCompany.Rows[r].Cells[0].Value.ToString());
-            Form company_details = new frmCompanyDetail(name,abbreviation, address, phone, id) ;
+            int id = Int32.Parse(dtgvCompany.Rows[r].Cells[0].Value.ToString());
+            Form company_details = new frmCompanyDetail(name, abbreviation, address, phone, id);
             company_details.ShowDialog();
         }
 

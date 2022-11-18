@@ -113,7 +113,10 @@ namespace App_Project_Management.Views
 
         private void MemberPage_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if(frmLogin.isLoginSuccess)
+            {
+                LoadData();
+            }
         }
 
         private void dtgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
