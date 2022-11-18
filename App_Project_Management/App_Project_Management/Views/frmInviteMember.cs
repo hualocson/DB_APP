@@ -32,32 +32,79 @@ namespace App_Project_Management.Views
         }
         private void LoadCompanyDetails()
         {
-            try
+            if (frmLogin.account.Role.Equals(Cons.ROLE.PM) || frmLogin.account.Role.Equals(Cons.ROLE.TL))
             {
-                cmbCompany.DataSource = dbCom.getAllCompany();
-                cmbCompany.ValueMember = "id";
-                cmbCompany.DisplayMember = "name";
-                cmbCompany.Text = "Select company";
+                try
+                {
+                    cmbCompany.DataSource = dbCom.getCompanyById((int)frmLogin.account.Company_id);
+                    cmbCompany.ValueMember = "id";
+                    cmbCompany.DisplayMember = "name";
+                    cmbCompany.Text = "Select company";
+                    LoadTeamInCompany();
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table company Lỗi rồi!!!");
+                }
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Không lấy được nội dung trong table company Lỗi rồi!!!");
+                try
+                {
+                    cmbCompany.DataSource = dbCom.getAllCompany();
+                    cmbCompany.ValueMember = "id";
+                    cmbCompany.DisplayMember = "name";
+                    cmbCompany.Text = "Select company";
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table company Lỗi rồi!!!");
+                }
             }
+            
         }
 
         public void LoadTeamInCompany()
         {
-            try
+            if (frmLogin.account.Role.Equals(Cons.ROLE.TL))
             {
-                cmbTeam.Text = "";
-                cmbTeam.DataSource = dbTeam.getTeamByCompanyId(int.Parse(cmbCompany.SelectedValue.ToString()));
-                cmbTeam.ValueMember = "id";
-                cmbTeam.DisplayMember = "name";
+                try
+                {
+                    cmbTeam.DataSource = dbTeam.getTeamById((int)frmLogin.account.Team_id);
+                    cmbTeam.ValueMember = "id";
+                    cmbTeam.DisplayMember = "name";
+                    cmbTeam.Text = "Select team";
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table team Lỗi rồi!!!");
+                }
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Không lấy được nội dung trong table team Lỗi rồi!!!");
+                try
+                {
+                    if(cmbRole.Text == "Team Lead")
+                    {
+                        cmbTeam.DataSource = dbTeam.getTeamNoneTeamLeadByCompanyId(int.Parse(cmbCompany.SelectedValue.ToString()));
+                        cmbTeam.ValueMember = "id";
+                        cmbTeam.DisplayMember = "name";
+                        cmbTeam.Text = "Select team";
+                    }
+                    else if(cmbRole.Text == "Team Member")
+                    { 
+                        cmbTeam.DataSource = dbTeam.getTeamByCompanyId(int.Parse(cmbCompany.SelectedValue.ToString()));
+                        cmbTeam.ValueMember = "id";
+                        cmbTeam.DisplayMember = "name";
+                        cmbTeam.Text = "Select team";
+                    }
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table team Lỗi rồi!!!");
+                }
             }
+            
         }
 
         public void LoadRole()
@@ -65,9 +112,10 @@ namespace App_Project_Management.Views
             try
             {
                 cmbRole.Text = "";
-                cmbRole.DataSource = dbRole.getRole();
+                cmbRole.DataSource = dbRole.getdownRole((int)frmLogin.account.Role);
                 cmbRole.ValueMember = "id";
                 cmbRole.DisplayMember = "name";
+                cmbRole.Text = "Select Role";
             }
             catch (SqlException)
             {
@@ -91,14 +139,33 @@ namespace App_Project_Management.Views
             int r = dbmem.checkExistUserAndTeamCompanyRoleIsNull(txbUserName.Text, ref err);
             if(r == 0)
             {
-                MessageBox.Show("Check lại thông tin member cần invite");
+                MessageBox.Show("Check lại thông tin member cần invite");                
             }
             else
             {
                 MDModel = new MemberDetailsModel(r);
-                dbmem.updateMember(r,MDModel.Name,MDModel.Gender,int.Parse(cmbRole.SelectedValue.ToString()), int.Parse(cmbTeam.SelectedValue.ToString()),MDModel.Username,MDModel.Password, int.Parse(cmbCompany.SelectedValue.ToString()),ref err);
+                if (cmbRole.Text == "Project Manager")
+                {
+                    dbmem.updateMember(r, MDModel.Name, MDModel.Gender, int.Parse(cmbRole.SelectedValue.ToString()), MDModel.Username, MDModel.Password, int.Parse(cmbCompany.SelectedValue.ToString()), ref err);
+                }
+                else
+                {
+                    dbmem.updateMember(r, MDModel.Name, MDModel.Gender, int.Parse(cmbRole.SelectedValue.ToString()), int.Parse(cmbTeam.SelectedValue.ToString()), MDModel.Username, MDModel.Password, int.Parse(cmbCompany.SelectedValue.ToString()), ref err);
+                }
             }
             this.Close();
+        }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbRole.Text == "Project Manager")
+            {
+                cmbTeam.Visible = false;
+            }
+            else
+            {
+                cmbTeam.Visible = true;
+            }
         }
     }
 }

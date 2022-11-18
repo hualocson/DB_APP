@@ -25,13 +25,24 @@ namespace App_Project_Management.BS_Layer
             string sqlString = $"exec getTeamByCompanyId {id}";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+        public DataTable getTeamById(int id)
+        {
+            string sqlString = $"exec getTeamById {id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
+
+        public DataTable getTeamNoneTeamLeadByCompanyId(int id)
+        {
+            string sqlString = $"exec getTeamNoneTeamLeadByCompanyId {id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
         public bool addTeamToProject(int team_id, int project_id, DateTime created_at, ref string err)
         {
             return db.MyExecuteNonQuery($"EXEC addTeamToProject {team_id}, {project_id}, '{created_at}'", CommandType.Text, ref err);
         }
-        public bool addTeam(string name, string abbreviation,int team_lead, int company_id, ref string err)
+        public bool addTeam(string name, string abbreviation,int company_id, ref string err)
         {
-            return db.MyExecuteNonQuery($"EXEC addTeam '{name}','{abbreviation}',{team_lead},{company_id}", CommandType.Text, ref err);
+            return db.MyExecuteNonQuery($"EXEC addTeam '{name}','{abbreviation}',null,{company_id}", CommandType.Text, ref err);
         }
         public DataTable getTeamLeadInCompany(int id)
         {

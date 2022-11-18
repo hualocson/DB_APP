@@ -20,6 +20,11 @@ namespace App_Project_Management.BS_Layer
             string sqlString = "EXEC getRole";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+        public DataTable getdownRole(int user_role)
+        {
+            string sqlString = $"EXEC getdownRole {user_role}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
 
     }
 }

@@ -68,7 +68,10 @@ namespace App_Project_Management.BS_Layer
         {
             return db.MyExecuteNonQuery($"EXEC updateMember {id},'{name}',{gender},{role},{team_id},'{username}','{password}',{company_id}", CommandType.Text, ref err);
         }
-
+        public bool updateMember(int id, string name, bool gender, int role, string username, string password, int company_id, ref string err)
+        {
+            return db.MyExecuteNonQuery($"EXEC updateMember {id},'{name}',{gender},{role},null,'{username}','{password}',{company_id}", CommandType.Text, ref err);
+        }
         public bool uppdateMemberWithNameAndAccount(int id, string name, bool gender, string username, string password, ref string err)
         {
             return db.MyExecuteNonQuery($"EXEC updateMemberNoneTeam {id},'{name}',{gender},'{username}','{password}'", CommandType.Text, ref err);
