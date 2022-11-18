@@ -142,5 +142,9 @@ namespace App_Project_Management.Views
         {
             scrollPrevious();
         }
+
+        private void txbsearch_TextChange(object sender, EventArgs e)
+        {
+        }
     }
 }

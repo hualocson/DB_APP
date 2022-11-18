@@ -26,6 +26,12 @@ namespace App_Project_Management.BS_Layer
             string sqlString = $"EXEC getProjectById {id}";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+
+        public DataTable searchProjectByName(string name)
+        {
+            string sqlString = $"SELECT * FROM dbo.searchProjectByName('{name}')";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
         public int addProject(string name, int progress, DateTime deadline, DateTime created_at,int company_id, string key, ref string err)
         {
             return int.Parse(db.ExcuteQueryScalar($"EXEC addProject '{name}',{progress},'{deadline}','{created_at}', {company_id},'{key}'", CommandType.Text, ref err));

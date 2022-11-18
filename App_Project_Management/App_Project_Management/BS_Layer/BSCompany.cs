@@ -26,6 +26,11 @@ namespace App_Project_Management.BS_Layer
             string sqlString = $"EXEC getCompanyById {id}";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+        public DataTable searchCompanyByName(string name)
+        {
+            string sqlString = $"SELECT * FROM dbo.searchCompanyByName('{name}')";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
         public bool addCompany(string name, string abbreviation, string address, string phone, ref string err)
         {
             return db.MyExecuteNonQuery($"EXEC addCompany '{name}',N'{abbreviation}','{address}','{phone}'", CommandType.Text, ref err);

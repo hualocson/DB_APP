@@ -40,16 +40,8 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlMemberTabHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlMemberTabBody = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.dtgvMember = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.pnlTable = new System.Windows.Forms.Panel();
-            this.pnlMemberTableHeader = new System.Windows.Forms.Panel();
-            this.btnInvite = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pnlMemberTableFilter = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAddMember = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.member_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +54,16 @@
             this.member_role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.company_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abbreviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlTable = new System.Windows.Forms.Panel();
+            this.pnlMemberTableHeader = new System.Windows.Forms.Panel();
+            this.btnInvite = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pnlMemberTableFilter = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.txbsearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddMember = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlMemberTabHeader.SuspendLayout();
-            this.pnlMemberTabBody.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMember)).BeginInit();
             this.pnlMemberTableHeader.SuspendLayout();
             this.pnlMemberTableFilter.SuspendLayout();
@@ -90,18 +90,18 @@
             this.label1.Text = "Members";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlMemberTabBody
+            // panel
             // 
-            this.pnlMemberTabBody.Controls.Add(this.dtgvMember);
-            this.pnlMemberTabBody.Controls.Add(this.pnlTable);
-            this.pnlMemberTabBody.Controls.Add(this.pnlMemberTableHeader);
-            this.pnlMemberTabBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMemberTabBody.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMemberTabBody.Location = new System.Drawing.Point(0, 50);
-            this.pnlMemberTabBody.Name = "pnlMemberTabBody";
-            this.pnlMemberTabBody.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlMemberTabBody.Size = new System.Drawing.Size(1058, 660);
-            this.pnlMemberTabBody.TabIndex = 6;
+            this.panel.Controls.Add(this.dtgvMember);
+            this.panel.Controls.Add(this.pnlTable);
+            this.panel.Controls.Add(this.pnlMemberTableHeader);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel.Location = new System.Drawing.Point(0, 50);
+            this.panel.Name = "panel";
+            this.panel.Padding = new System.Windows.Forms.Padding(10);
+            this.panel.Size = new System.Drawing.Size(1058, 660);
+            this.panel.TabIndex = 6;
             // 
             // dtgvMember
             // 
@@ -177,6 +177,98 @@
             this.dtgvMember.TabIndex = 6;
             this.dtgvMember.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgvMember.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvMember_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // member_name
+            // 
+            this.member_name.DataPropertyName = "name";
+            this.member_name.HeaderText = "Name";
+            this.member_name.MinimumWidth = 6;
+            this.member_name.Name = "member_name";
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "gender";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gender.Visible = false;
+            // 
+            // role_id
+            // 
+            this.role_id.DataPropertyName = "role_id";
+            this.role_id.HeaderText = "role_id";
+            this.role_id.MinimumWidth = 6;
+            this.role_id.Name = "role_id";
+            this.role_id.Visible = false;
+            // 
+            // team_id
+            // 
+            this.team_id.DataPropertyName = "team_id";
+            this.team_id.HeaderText = "team_id";
+            this.team_id.MinimumWidth = 6;
+            this.team_id.Name = "team_id";
+            this.team_id.Visible = false;
+            // 
+            // team_name
+            // 
+            this.team_name.DataPropertyName = "team_name";
+            this.team_name.HeaderText = "Team";
+            this.team_name.MinimumWidth = 6;
+            this.team_name.Name = "team_name";
+            // 
+            // member_email
+            // 
+            this.member_email.DataPropertyName = "username";
+            this.member_email.HeaderText = "Email";
+            this.member_email.MinimumWidth = 6;
+            this.member_email.Name = "member_email";
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.Visible = false;
+            // 
+            // company_id
+            // 
+            this.company_id.DataPropertyName = "company_id";
+            this.company_id.HeaderText = "company_id";
+            this.company_id.MinimumWidth = 6;
+            this.company_id.Name = "company_id";
+            this.company_id.Visible = false;
+            // 
+            // member_role
+            // 
+            this.member_role.DataPropertyName = "role";
+            this.member_role.HeaderText = "Role";
+            this.member_role.MinimumWidth = 6;
+            this.member_role.Name = "member_role";
+            // 
+            // company_name
+            // 
+            this.company_name.DataPropertyName = "company_name";
+            this.company_name.HeaderText = "Company";
+            this.company_name.MinimumWidth = 6;
+            this.company_name.Name = "company_name";
+            // 
+            // abbreviation
+            // 
+            this.abbreviation.DataPropertyName = "abbreviation";
+            this.abbreviation.HeaderText = "Abbreviation";
+            this.abbreviation.MinimumWidth = 6;
+            this.abbreviation.Name = "abbreviation";
+            this.abbreviation.Visible = false;
             // 
             // pnlTable
             // 
@@ -298,7 +390,7 @@
             this.pnlMemberTableFilter.BorderRadius = 10;
             this.pnlMemberTableFilter.BorderThickness = 0;
             this.pnlMemberTableFilter.Controls.Add(this.bunifuImageButton2);
-            this.pnlMemberTableFilter.Controls.Add(this.bunifuTextBox2);
+            this.pnlMemberTableFilter.Controls.Add(this.txbsearch);
             this.pnlMemberTableFilter.Controls.Add(this.button1);
             this.pnlMemberTableFilter.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMemberTableFilter.Location = new System.Drawing.Point(391, 0);
@@ -343,80 +435,81 @@
             this.bunifuImageButton2.Zoom = 0;
             this.bunifuImageButton2.ZoomSpeed = 10;
             // 
-            // bunifuTextBox2
+            // txbsearch
             // 
-            this.bunifuTextBox2.AcceptsReturn = false;
-            this.bunifuTextBox2.AcceptsTab = false;
-            this.bunifuTextBox2.AnimationSpeed = 200;
-            this.bunifuTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.BackgroundImage")));
-            this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
-            this.bunifuTextBox2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
-            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
-            this.bunifuTextBox2.BorderRadius = 5;
-            this.bunifuTextBox2.BorderThickness = 1;
-            this.bunifuTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.DefaultFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox2.DefaultText = "";
-            this.bunifuTextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.bunifuTextBox2.HideSelection = true;
-            this.bunifuTextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.IconLeft")));
-            this.bunifuTextBox2.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.IconPadding = 10;
-            this.bunifuTextBox2.IconRight = null;
-            this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(325, 5);
-            this.bunifuTextBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTextBox2.MaxLength = 32767;
-            this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox2.Modified = false;
-            this.bunifuTextBox2.Multiline = false;
-            this.bunifuTextBox2.Name = "bunifuTextBox2";
+            this.txbsearch.AcceptsReturn = false;
+            this.txbsearch.AcceptsTab = false;
+            this.txbsearch.AnimationSpeed = 200;
+            this.txbsearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txbsearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txbsearch.BackColor = System.Drawing.Color.Transparent;
+            this.txbsearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txbsearch.BackgroundImage")));
+            this.txbsearch.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
+            this.txbsearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txbsearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
+            this.txbsearch.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
+            this.txbsearch.BorderRadius = 5;
+            this.txbsearch.BorderThickness = 1;
+            this.txbsearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txbsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbsearch.DefaultFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbsearch.DefaultText = "";
+            this.txbsearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.txbsearch.HideSelection = true;
+            this.txbsearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbsearch.IconLeft")));
+            this.txbsearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbsearch.IconPadding = 10;
+            this.txbsearch.IconRight = null;
+            this.txbsearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbsearch.Lines = new string[0];
+            this.txbsearch.Location = new System.Drawing.Point(325, 5);
+            this.txbsearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txbsearch.MaxLength = 32767;
+            this.txbsearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txbsearch.Modified = false;
+            this.txbsearch.Multiline = false;
+            this.txbsearch.Name = "txbsearch";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(176)))), ((int)(((byte)(174)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnActiveState = stateProperties1;
+            this.txbsearch.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox2.OnDisabledState = stateProperties2;
+            this.txbsearch.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(227)))), ((int)(((byte)(219)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnHoverState = stateProperties3;
+            this.txbsearch.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnIdleState = stateProperties4;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox2.PasswordChar = '\0';
-            this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.PlaceholderText = "Search ...";
-            this.bunifuTextBox2.ReadOnly = false;
-            this.bunifuTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox2.SelectedText = "";
-            this.bunifuTextBox2.SelectionLength = 0;
-            this.bunifuTextBox2.SelectionStart = 0;
-            this.bunifuTextBox2.ShortcutsEnabled = true;
-            this.bunifuTextBox2.Size = new System.Drawing.Size(244, 43);
-            this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox2.TabIndex = 3;
-            this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox2.TextMarginBottom = 0;
-            this.bunifuTextBox2.TextMarginLeft = 10;
-            this.bunifuTextBox2.TextMarginTop = 0;
-            this.bunifuTextBox2.TextPlaceholder = "Search ...";
-            this.bunifuTextBox2.UseSystemPasswordChar = false;
-            this.bunifuTextBox2.WordWrap = true;
+            this.txbsearch.OnIdleState = stateProperties4;
+            this.txbsearch.Padding = new System.Windows.Forms.Padding(3);
+            this.txbsearch.PasswordChar = '\0';
+            this.txbsearch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txbsearch.PlaceholderText = "Search ...";
+            this.txbsearch.ReadOnly = false;
+            this.txbsearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txbsearch.SelectedText = "";
+            this.txbsearch.SelectionLength = 0;
+            this.txbsearch.SelectionStart = 0;
+            this.txbsearch.ShortcutsEnabled = true;
+            this.txbsearch.Size = new System.Drawing.Size(244, 43);
+            this.txbsearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txbsearch.TabIndex = 3;
+            this.txbsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbsearch.TextMarginBottom = 0;
+            this.txbsearch.TextMarginLeft = 10;
+            this.txbsearch.TextMarginTop = 0;
+            this.txbsearch.TextPlaceholder = "Search ...";
+            this.txbsearch.UseSystemPasswordChar = false;
+            this.txbsearch.WordWrap = true;
+            this.txbsearch.TextChange += new System.EventHandler(this.txbsearch_TextChange);
             // 
             // button1
             // 
@@ -527,103 +620,11 @@
             this.btnAddMember.UseDefaultRadiusAndThickness = true;
             this.btnAddMember.Click += new System.EventHandler(this.btnInviteMember_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // member_name
-            // 
-            this.member_name.DataPropertyName = "name";
-            this.member_name.HeaderText = "Name";
-            this.member_name.MinimumWidth = 6;
-            this.member_name.Name = "member_name";
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "gender";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gender.Visible = false;
-            // 
-            // role_id
-            // 
-            this.role_id.DataPropertyName = "role_id";
-            this.role_id.HeaderText = "role_id";
-            this.role_id.MinimumWidth = 6;
-            this.role_id.Name = "role_id";
-            this.role_id.Visible = false;
-            // 
-            // team_id
-            // 
-            this.team_id.DataPropertyName = "team_id";
-            this.team_id.HeaderText = "team_id";
-            this.team_id.MinimumWidth = 6;
-            this.team_id.Name = "team_id";
-            this.team_id.Visible = false;
-            // 
-            // team_name
-            // 
-            this.team_name.DataPropertyName = "team_name";
-            this.team_name.HeaderText = "Team";
-            this.team_name.MinimumWidth = 6;
-            this.team_name.Name = "team_name";
-            // 
-            // member_email
-            // 
-            this.member_email.DataPropertyName = "username";
-            this.member_email.HeaderText = "Email";
-            this.member_email.MinimumWidth = 6;
-            this.member_email.Name = "member_email";
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.Visible = false;
-            // 
-            // company_id
-            // 
-            this.company_id.DataPropertyName = "company_id";
-            this.company_id.HeaderText = "company_id";
-            this.company_id.MinimumWidth = 6;
-            this.company_id.Name = "company_id";
-            this.company_id.Visible = false;
-            // 
-            // member_role
-            // 
-            this.member_role.DataPropertyName = "role";
-            this.member_role.HeaderText = "Role";
-            this.member_role.MinimumWidth = 6;
-            this.member_role.Name = "member_role";
-            // 
-            // company_name
-            // 
-            this.company_name.DataPropertyName = "company_name";
-            this.company_name.HeaderText = "Company";
-            this.company_name.MinimumWidth = 6;
-            this.company_name.Name = "company_name";
-            // 
-            // abbreviation
-            // 
-            this.abbreviation.DataPropertyName = "abbreviation";
-            this.abbreviation.HeaderText = "Abbreviation";
-            this.abbreviation.MinimumWidth = 6;
-            this.abbreviation.Name = "abbreviation";
-            this.abbreviation.Visible = false;
-            // 
             // MemberPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.Controls.Add(this.pnlMemberTabBody);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.pnlMemberTabHeader);
             this.Font = new System.Drawing.Font("Arial", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
@@ -631,7 +632,7 @@
             this.Size = new System.Drawing.Size(1058, 710);
             this.Load += new System.EventHandler(this.MemberPage_Load);
             this.pnlMemberTabHeader.ResumeLayout(false);
-            this.pnlMemberTabBody.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMember)).EndInit();
             this.pnlMemberTableHeader.ResumeLayout(false);
             this.pnlMemberTableFilter.ResumeLayout(false);
@@ -643,12 +644,12 @@
 
         private System.Windows.Forms.Panel pnlMemberTabHeader;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlMemberTabBody;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel pnlTable;
         private System.Windows.Forms.Panel pnlMemberTableHeader;
         private Bunifu.UI.WinForms.BunifuPanel pnlMemberTableFilter;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
+        private Bunifu.UI.WinForms.BunifuTextBox txbsearch;
         private System.Windows.Forms.Button button1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddMember;
         private Bunifu.UI.WinForms.BunifuDataGridView dtgvMember;
