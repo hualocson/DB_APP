@@ -87,13 +87,27 @@ namespace App_Project_Management.Views
 
         public void LoadMemberWithWord()
         {
-            try
+            if (!frmLogin.account.Role.Equals(Cons.ROLE.TL))
             {
-                dtgvMember.DataSource = dbMem.searchMemberByName(this.txbsearch.Text);
+                try
+                {
+                    dtgvMember.DataSource = dbMem.searchMemberInCompanyByName((int)frmLogin.account.Company_id, this.txbsearch.Text);
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                }
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                try
+                {
+                    dtgvMember.DataSource = dbMem.searchMemberInTeamByName((int)frmLogin.account.Team_id, this.txbsearch.Text);
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                }
             }
         }
 

@@ -94,7 +94,10 @@ namespace App_Project_Management.Views
 
         private void txbseach_TextChange(object sender, EventArgs e)
         {
-            LoadDataWithWord();
+            if (frmLogin.account.Role.Equals(Cons.ROLE.SA))
+            {
+                LoadDataWithWord();
+            }
         }
 
         private void txbseach_KeyUp(object sender, KeyEventArgs e)
