@@ -103,7 +103,10 @@ namespace App_Project_Management.Views
         }
         private void ProjectPage_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if(frmLogin.isLoginSuccess)
+            {
+                LoadData();
+            }
         }
         bool isInLastPage()
         {

@@ -17,7 +17,6 @@ D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-Fo
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.MemberPage.resources
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.ProjectCard.resources
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.ProjectPage.resources
-D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.TaskCard.resources
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.TaskPage.resources
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.csproj.GenerateResource.cache
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.exe.licenses
@@ -27,3 +26,5 @@ D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-Fo
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.pdb
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.frmAddProject.resources
 D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.frmAddTeam.resources
+D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\obj\Debug\App_Project_Management.Views.frmTaskDetails.resources
+D:\Workspace\HK1 2022-2023\Database Management System\Assignments\Cuoi Ky\App-For-DB\App_Project_Management\App_Project_Management\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll

@@ -54,7 +54,10 @@ namespace App_Project_Management.Views
 
         private void TaskPage_Load(object sender, EventArgs e)
         {
-            //LoadData();
+            if(frmLogin.isLoginSuccess)
+            {
+                LoadData();
+            }
         }
 
         private void btnAddTodoTask_Click(object sender, EventArgs e)
