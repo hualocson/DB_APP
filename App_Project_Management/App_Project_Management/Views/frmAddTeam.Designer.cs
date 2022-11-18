@@ -34,13 +34,11 @@ namespace App_Project_Management.Views
             this.label2 = new System.Windows.Forms.Label();
             this.txbname = new System.Windows.Forms.TextBox();
             this.txbabbreviation = new System.Windows.Forms.TextBox();
-            this.cbbteamlist = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(231, 174);
+            this.btnAdd.Location = new System.Drawing.Point(220, 128);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(169, 60);
             this.btnAdd.TabIndex = 0;
@@ -82,31 +80,11 @@ namespace App_Project_Management.Views
             this.txbabbreviation.Size = new System.Drawing.Size(206, 22);
             this.txbabbreviation.TabIndex = 8;
             // 
-            // cbbteamlist
-            // 
-            this.cbbteamlist.FormattingEnabled = true;
-            this.cbbteamlist.Location = new System.Drawing.Point(183, 129);
-            this.cbbteamlist.Name = "cbbteamlist";
-            this.cbbteamlist.Size = new System.Drawing.Size(206, 24);
-            this.cbbteamlist.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Team Lead";
-            // 
             // frmAddTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 246);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbbteamlist);
+            this.ClientSize = new System.Drawing.Size(412, 195);
             this.Controls.Add(this.txbabbreviation);
             this.Controls.Add(this.txbname);
             this.Controls.Add(this.label2);
@@ -127,7 +105,5 @@ namespace App_Project_Management.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbname;
         private System.Windows.Forms.TextBox txbabbreviation;
-        private System.Windows.Forms.ComboBox cbbteamlist;
-        private System.Windows.Forms.Label label3;
     }
 }
