@@ -54,19 +54,42 @@ namespace App_Project_Management.Views
 
         public void LoadTeamData()
         {
-            try
+            if(frmLogin.account.Role.Equals(Cons.ROLE.TL) || frmLogin.account.Role.Equals(Cons.ROLE.TM))
             {
-                dtTeamInProject = new DataTable();
-                dtTeamInProject.Clear();
-                dtTeamInProject = dbTeam.getTeamByProjectId(projectDetailsModel.ProjectId);
-                dtgvTeams.DataSource = dtTeamInProject;
-                cmbTeamList.DataSource = dbTeam.getTeamByCompanyId(projectDetailsModel.Company_id);
-                cmbTeamList.ValueMember = "id";
-                cmbTeamList.DisplayMember = "name";
+                try
+                {
+                    dtTeamInProject = new DataTable();
+                    dtTeamInProject.Clear();
+                    dtTeamInProject = dbTeam.getTeamByProjectId(projectDetailsModel.ProjectId);
+                    dtgvTeams.DataSource = dtTeamInProject;
+                    cmbTeamList.DataSource = dbTeam.getTeamByCompanyId(projectDetailsModel.Company_id);
+                    cmbTeamList.ValueMember = "id";
+                    cmbTeamList.DisplayMember = "name";
+                    btnAssignTeam.Enabled = false;
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table project Lỗi rồi!!!");
+                }
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Không lấy được nội dung trong table project Lỗi rồi!!!");
+                try
+                {
+                    dtTeamInProject = new DataTable();
+                    dtTeamInProject.Clear();
+                    dtTeamInProject = dbTeam.getTeamByProjectId(projectDetailsModel.ProjectId);
+                    dtgvTeams.DataSource = dtTeamInProject;
+                    cmbTeamList.DataSource = dbTeam.getTeamByCompanyId(projectDetailsModel.Company_id);
+                    cmbTeamList.ValueMember = "id";
+                    cmbTeamList.DisplayMember = "name";
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không lấy được nội dung trong table project Lỗi rồi!!!");
+                }
             }
         }
 

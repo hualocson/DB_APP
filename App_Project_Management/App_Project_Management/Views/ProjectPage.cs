@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using App_Project_Management.Model;
 
 namespace App_Project_Management.Views
 {
@@ -55,6 +56,10 @@ namespace App_Project_Management.Views
             catch (SqlException)
             {
                 MessageBox.Show("Không lấy được nội dung trong table Project Lỗi rồi!!!");
+            }
+            if (frmLogin.account.Role.Equals(Cons.ROLE.TL) || frmLogin.account.Role.Equals(Cons.ROLE.TM))
+            {
+                this.btnAddProject.Enabled = false;
             }
         }
 

@@ -36,7 +36,7 @@ namespace App_Project_Management.Views
             {
                 // Thực hiện lệnh 
                 BSTeam bsteam = new BSTeam();
-                bsteam.addTeam(this.txbname.Text, this.txbabbreviation.Text,int.Parse(cbbteamlist.SelectedValue.ToString()), TDModel.Company_id, ref err);
+                bsteam.addTeam(this.txbname.Text, this.txbabbreviation.Text, TDModel.Company_id, ref err);
                 // Load lại dữ liệu trên DataGridView
                 // Thông báo 
                 this.Close();
@@ -50,22 +50,8 @@ namespace App_Project_Management.Views
 
         private void frmAddTeam_Load(object sender, EventArgs e)
         {
-            LoadTeamListData();
             txbname.Text = TDModel.Name;
             txbabbreviation.Text = TDModel.Abbreviation;
-        }
-        public void LoadTeamListData()
-        {
-            try
-            {
-                cbbteamlist.DataSource = dbTeam.getTeamLeadInCompany(TDModel.Company_id);
-                cbbteamlist.ValueMember = "id";
-                cbbteamlist.DisplayMember = "name";
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Không lấy được nội dung trong table project Lỗi rồi!!!");
-            }
         }
     }
 }
