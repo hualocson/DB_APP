@@ -38,9 +38,14 @@ namespace App_Project_Management.BS_Layer
             string sqlString = "EXEC getAllMember";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
-        public DataTable searchMemberByName(string name)
+        public DataTable searchMemberInCompanyByName(int id, string name)
         {
-            string sqlString = $"SELECT * FROM dbo.searchMemberByName('{name}')";
+            string sqlString = $"SELECT * FROM dbo.searchMemberInCompanyByName({id},'{name}')";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
+        public DataTable searchMemberInTeamByName(int id, string name)
+        {
+            string sqlString = $"SELECT * FROM dbo.searchMemberInTeamByName({id},'{name}')";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
         public DataTable getAllMemberByCompanyId(int company_id)
