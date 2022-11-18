@@ -18,6 +18,7 @@ namespace App_Project_Management
     public partial class frmMain : Form
     {
         static public int activePage = 0;
+        static public int currentProjectID = 0;
         private void changePage()
         {
             main.PageIndex = activePage;
@@ -67,6 +68,7 @@ namespace App_Project_Management
         {
             changePage();
             showUI();
+            lbAcc.Text = $"{frmLogin.account.Name}, {frmLogin.account.Id}";
         }
 
         private void showUI()
@@ -104,6 +106,7 @@ namespace App_Project_Management
             companyTabPage.LoadData();
             memberPage.LoadData();
             projectPage.LoadUpdateData();
+            taskTabPage.LoadData();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

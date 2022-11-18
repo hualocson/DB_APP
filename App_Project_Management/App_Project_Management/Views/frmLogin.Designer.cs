@@ -380,7 +380,7 @@
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbPassword.OnIdleState = stateProperties4;
             this.txbPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.txbPassword.PasswordChar = '\0';
+            this.txbPassword.PasswordChar = '●';
             this.txbPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbPassword.PlaceholderText = "";
             this.txbPassword.ReadOnly = false;
@@ -397,7 +397,7 @@
             this.txbPassword.TextMarginLeft = 3;
             this.txbPassword.TextMarginTop = 0;
             this.txbPassword.TextPlaceholder = "";
-            this.txbPassword.UseSystemPasswordChar = false;
+            this.txbPassword.UseSystemPasswordChar = true;
             this.txbPassword.WordWrap = true;
             // 
             // label4

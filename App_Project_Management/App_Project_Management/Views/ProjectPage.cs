@@ -42,6 +42,7 @@ namespace App_Project_Management.Views
                 dtProject = new DataTable();
                 dtProject.Clear();
                 dtProject = dbProject.getAllProject();
+
                 projectCards.Clear();
                 foreach (DataRow row in dtProject.Rows)
                 {
