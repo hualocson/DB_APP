@@ -64,10 +64,6 @@ namespace App_Project_Management.Views
                 }
             }
         }
-        private void CompanyPage_Load(object sender, EventArgs e)
-        {
-            LoadData();
-        }
 
         private void dtgvCompany_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -302,7 +302,7 @@
             this.btnLogout.OnIdleState.BorderThickness = 1;
             this.btnLogout.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.btnLogout.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnLogout.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton4.OnIdleState.IconLeftImage")));
+            this.btnLogout.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.OnIdleState.IconLeftImage")));
             this.btnLogout.OnIdleState.IconRightImage = null;
             this.btnLogout.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.btnLogout.OnPressedState.BorderRadius = 20;
@@ -640,10 +640,10 @@
             this.main.Location = new System.Drawing.Point(300, 30);
             this.main.Multiline = true;
             this.main.Name = "main";
-            this.main.Page = this.companyTab;
-            this.main.PageIndex = 0;
-            this.main.PageName = "companyTab";
-            this.main.PageTitle = "Companies";
+            this.main.Page = this.memberTab;
+            this.main.PageIndex = 2;
+            this.main.PageName = "memberTab";
+            this.main.PageTitle = "Members";
             this.main.SelectedIndex = 0;
             this.main.Size = new System.Drawing.Size(1066, 738);
             this.main.TabIndex = 2;
@@ -716,7 +716,7 @@
             this.memberTab.Controls.Add(this.memberPage);
             this.memberTab.Location = new System.Drawing.Point(4, 4);
             this.memberTab.Name = "memberTab";
-            this.memberTab.Size = new System.Drawing.Size(192, 74);
+            this.memberTab.Size = new System.Drawing.Size(1058, 710);
             this.memberTab.TabIndex = 2;
             this.memberTab.Text = "Members";
             // 
@@ -728,7 +728,7 @@
             this.memberPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(91)))), ((int)(((byte)(110)))));
             this.memberPage.Location = new System.Drawing.Point(0, 0);
             this.memberPage.Name = "memberPage";
-            this.memberPage.Size = new System.Drawing.Size(192, 74);
+            this.memberPage.Size = new System.Drawing.Size(1058, 710);
             this.memberPage.TabIndex = 0;
             // 
             // taskPage

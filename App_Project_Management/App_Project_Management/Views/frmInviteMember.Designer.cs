@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInviteMember));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pnlWindowTools = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnHide = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -197,7 +197,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 23);
+            this.label1.Size = new System.Drawing.Size(87, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "User Name";
             // 
@@ -234,26 +234,26 @@
             this.txbUserName.Modified = false;
             this.txbUserName.Multiline = false;
             this.txbUserName.Name = "txbUserName";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txbUserName.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txbUserName.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txbUserName.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txbUserName.OnIdleState = stateProperties8;
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txbUserName.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txbUserName.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txbUserName.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txbUserName.OnIdleState = stateProperties20;
             this.txbUserName.Padding = new System.Windows.Forms.Padding(3);
             this.txbUserName.PasswordChar = '\0';
             this.txbUserName.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -264,7 +264,7 @@
             this.txbUserName.SelectionLength = 0;
             this.txbUserName.SelectionStart = 0;
             this.txbUserName.ShortcutsEnabled = true;
-            this.txbUserName.Size = new System.Drawing.Size(217, 41);
+            this.txbUserName.Size = new System.Drawing.Size(217, 37);
             this.txbUserName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbUserName.TabIndex = 4;
             this.txbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -280,7 +280,7 @@
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(133, 124);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(217, 31);
+            this.cmbRole.Size = new System.Drawing.Size(217, 26);
             this.cmbRole.TabIndex = 5;
             // 
             // label3
@@ -288,7 +288,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 23);
+            this.label3.Size = new System.Drawing.Size(40, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Role";
             // 
@@ -297,7 +297,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 265);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.Size = new System.Drawing.Size(46, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Team";
             // 
@@ -306,7 +306,7 @@
             this.cmbTeam.FormattingEnabled = true;
             this.cmbTeam.Location = new System.Drawing.Point(133, 257);
             this.cmbTeam.Name = "cmbTeam";
-            this.cmbTeam.Size = new System.Drawing.Size(216, 31);
+            this.cmbTeam.Size = new System.Drawing.Size(216, 26);
             this.cmbTeam.TabIndex = 7;
             // 
             // label5
@@ -314,7 +314,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 191);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 23);
+            this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 10;
             this.label5.Text = "Company";
             // 
@@ -323,11 +323,9 @@
             this.cmbCompany.FormattingEnabled = true;
             this.cmbCompany.Location = new System.Drawing.Point(133, 183);
             this.cmbCompany.Name = "cmbCompany";
-            this.cmbCompany.Size = new System.Drawing.Size(216, 31);
+            this.cmbCompany.Size = new System.Drawing.Size(216, 26);
             this.cmbCompany.TabIndex = 9;
-            this.cmbCompany.SelectedIndexChanged += new System.EventHandler(this.cmbCompany_SelectedIndexChanged);
             this.cmbCompany.SelectionChangeCommitted += new System.EventHandler(this.cmbCompany_SelectionChangeCommitted);
-            this.cmbCompany.Click += new System.EventHandler(this.cmbCompany_Click);
             // 
             // btnInvite
             // 
@@ -348,11 +346,11 @@
             this.btnInvite.ColorContrastOnClick = 45;
             this.btnInvite.ColorContrastOnHover = 45;
             this.btnInvite.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnInvite.CustomizableEdges = borderEdges2;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnInvite.CustomizableEdges = borderEdges5;
             this.btnInvite.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInvite.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnInvite.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
