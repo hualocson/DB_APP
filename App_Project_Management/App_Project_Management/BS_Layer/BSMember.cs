@@ -38,6 +38,16 @@ namespace App_Project_Management.BS_Layer
             string sqlString = "EXEC getAllMember";
             return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
         }
+        public DataTable getAllMemberByCompanyId(int company_id)
+        {
+            string sqlString = $"EXEC getAllMemberByCompanyId {company_id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
+        public DataTable getAllMemberByTeamId(int team_id)
+        {
+            string sqlString = $"EXEC getAllMemberByTeamId {team_id}";
+            return db.ExecuteQueryDataSet(sqlString, CommandType.Text).Tables[0];
+        }
 
         public bool addMember(string name, bool gender, int role, int team_id, string username, string password, int company_id, ref string err)
         {

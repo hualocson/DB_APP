@@ -71,7 +71,7 @@ namespace App_Project_Management.Views
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không lấy được nội dung trong table team Lỗi rồi!!!");
+                MessageBox.Show("Không lấy được nội dung trong table role Lỗi rồi!!!");
             }
         }
 
@@ -79,16 +79,6 @@ namespace App_Project_Management.Views
         {
             LoadCompanyDetails();
             LoadRole();
-        }
-
-        private void cmbCompany_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCompany_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cmbCompany_SelectionChangeCommitted(object sender, EventArgs e)

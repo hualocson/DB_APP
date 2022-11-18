@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using App_Project_Management.BS_Layer;
+using App_Project_Management.Model;
+
 namespace App_Project_Management.Views
 {
     public partial class MemberPage : UserControl
@@ -30,28 +32,57 @@ namespace App_Project_Management.Views
         private void btnInvite_Click(object sender, EventArgs e)
         {
             Form inviteMember = new frmInviteMember();
-            inviteMember.ShowDialog();  
+            inviteMember.ShowDialog();
         }
         public void LoadData()
         {
-            try
+            switch (frmLogin.account.Role)
             {
-                dtMember = new DataTable();
-                dtMember.Clear();
-                dtMember = dbMem.getAllMember();
-                // Đưa dữ liệu lên DataGridView 
-                dtgvMember.DataSource = dtMember;
-
+                case Cons.ROLE.SA:
+                    try
+                    {
+                        dtMember = new DataTable();
+                        dtMember.Clear();
+                        dtMember = dbMem.getAllMember();
+                        // Đưa dữ liệu lên DataGridView 
+                        dtgvMember.DataSource = dtMember;
+                    }
+                    catch (SqlException)
+                    {
+                        MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                    }
+                    break;
+                case Cons.ROLE.PM:
+                    try
+                    {
+                        dtMember = new DataTable();
+                        dtMember.Clear();
+                        dtMember = dbMem.getAllMemberByCompanyId(frmLogin.account.Company_id);
+                        // Đưa dữ liệu lên DataGridView 
+                        dtgvMember.DataSource = dtMember;
+                    }
+                    catch (SqlException)
+                    {
+                        MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                    }
+                    break;
+                case Cons.ROLE.TL:
+                    try
+                    {
+                        dtMember = new DataTable();
+                        dtMember.Clear();
+                        dtMember = dbMem.getAllMemberByTeamId(frmLogin.account.Team_id);
+                        // Đưa dữ liệu lên DataGridView 
+                        dtgvMember.DataSource = dtMember;
+                    }
+                    catch (SqlException)
+                    {
+                        MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
+                    }
+                    break;
+                case Cons.ROLE.TM:
+                    break;
             }
-            catch (SqlException)
-            {
-                MessageBox.Show("Không lấy được nội dung trong table Company Lỗi rồi!!!");
-            }
-        }
-
-        private void MemberPage_Load(object sender, EventArgs e)
-        {
-            LoadData();
         }
 
         private void dtgvMember_CellClick(object sender, DataGridViewCellEventArgs e)
